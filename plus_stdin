@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 import sys
 
-x = [float(line) for line in sys.stdin]
-print(sum(x))
+x = 0
+for line in sys.stdin:
+    try:
+        x += int(line)
+    except:
+        x += float(line)
+
+print(x)
