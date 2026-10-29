@@ -11,6 +11,6 @@ def tonum(s):
         return float(s)
 x = 0
 for line in sys.stdin:
-    x += tonum(line.rstrip())
+    x += tonum(line)
 
 print(x)
