@@ -12,6 +12,10 @@ res=0                           		# 0: 失敗なし（ngが呼ばれると1に�
 out=$(seq 5 | ./plus)				#表の1行目: plusの出力を変数outに記録
 [ "${out}" = 15 ] || ng "$LINENO"		#期待する出力(15)でなければngを呼び出す
 
+out=$(echo あ | ./plus)
+[ "$?" = 1 ] 	  || ng "$LINENO"
+[ "${out}" = "" ]  || ng "$LINENO"
+
 [ "${res}" = 0 ] && echo OK			#通ったのが分かるように表示
 
 exit $res    					#終了ステータスを返却して終了
