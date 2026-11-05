@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 #SPDX-FileCopyrightText: 2026 Haruto Handa
 #SPDX-License-Identifier: BSD-3-Clause
 import sys
@@ -11,6 +11,6 @@ def tonum(s):
         return float(s)
 x = 0
 for line in sys.stdin:
-    x += tonum(line)
+    x += tonum(line.rstrip())
 
 print(x)
