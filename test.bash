@@ -18,7 +18,7 @@ out=$(echo あ | ./plus)					#計算できない値を入力
 
 out=$(echo  | ./plus)					#なにも入力しない
 [ "$?" = 1 ]	  || ng "$LINENO"
-[ "${out}" = ""]  || ng "$LINENO"
+[ "${out}" = "" ]  || ng "$LINENO"
 
 [ "${res}" = 0 ] && echo OK			#通ったのが分かるように表示
 
